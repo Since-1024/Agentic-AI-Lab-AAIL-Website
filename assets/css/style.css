@@ -1,0 +1,152 @@
+:root {
+  --aail-blue: #0d6efd;
+  --aail-dark: #0b275a;
+  --aail-light: #f7f9fc;
+  --aail-gray: #6c757d;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #ffffff;
+  color: #1f2d3d;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--aail-blue);
+}
+
+a:hover {
+  color: #0a58ca;
+}
+
+.navbar {
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  background-color: #ffffff !important;
+  backdrop-filter: none;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.hero {
+  background: linear-gradient(110deg, rgba(13, 110, 253, 0.08), rgba(13, 110, 253, 0.02));
+  border-radius: 18px;
+  padding: 3rem;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--aail-dark);
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  color: #2d3b4f;
+}
+
+.section-title {
+  font-weight: 800;
+  color: var(--aail-dark);
+  letter-spacing: 0.3px;
+}
+
+.section-lead {
+  color: var(--aail-gray);
+  max-width: 760px;
+}
+
+.card-shadow {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card-shadow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 38px rgba(13, 110, 253, 0.12);
+}
+
+.badge-soft {
+  background: rgba(13, 110, 253, 0.08);
+  color: var(--aail-dark);
+  border: 1px solid rgba(13, 110, 253, 0.2);
+  padding: 0.4rem 0.65rem;
+  border-radius: 50rem;
+  font-size: 0.85rem;
+}
+
+.img-placeholder {
+  background-color: var(--aail-light);
+  border: 1px dashed rgba(13, 110, 253, 0.25);
+}
+
+.img-banner {
+  width: 100%;
+  max-width: 520px;   /* 控制最大显示宽度 */
+  height: 320px;      /* 固定显示高度 */
+  object-fit: cover;  /* 等比裁剪，不拉伸 */
+}
+
+
+/* .card-img-top:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+} */
+
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--aail-blue);
+}
+
+.map-placeholder {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.02));
+  border: 1px dashed rgba(13, 110, 253, 0.3);
+  border-radius: 12px;
+  min-height: 260px;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+}
+
+/* Particle layer behind the content */
+.particle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Keep core content above the particle canvas */
+body > nav,
+body > main,
+body > footer {
+  position: relative;
+  z-index: 1;
+}
