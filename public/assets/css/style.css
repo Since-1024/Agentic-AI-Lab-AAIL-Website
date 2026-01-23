@@ -39,7 +39,7 @@ a:hover {
 }
 
 .hero {
-  background: linear-gradient(110deg, rgba(13, 110, 253, 0.08), rgba(13, 110, 253, 0.02));
+  background: linear-gradient(110deg, rgba(4, 82, 62, 0.12), rgba(72, 3, 73, 0.12));
   border-radius: 18px;
   padding: 3rem;
 }
