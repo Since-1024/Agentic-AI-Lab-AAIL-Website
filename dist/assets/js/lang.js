@@ -10,5 +10,5 @@ function setLanguage(lang){
       localStorage.setItem('aail-lang', lang);
     });
 }
-const saved = localStorage.getItem('aail-lang') || 'en';
+const saved = localStorage.getItem('aail-lang') || 'zh';
 setLanguage(saved);
