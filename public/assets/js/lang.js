@@ -1,6 +1,6 @@
 // Language switcher
 function setLanguage(lang){
-  fetch('/assets/lang/'+lang+'.json')
+  fetch('assets/lang/'+lang+'.json')
     .then(r=>r.json())
     .then(data=>{
       document.querySelectorAll('[data-lang]').forEach(el=>{
