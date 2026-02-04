@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-lang="metaTitleHome"></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+    <!-- 顶部导航栏：全站共享的导航与语言切换 -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
+    <div class="container py-2">
+      <a class="navbar-brand" href="#home" data-lang="navBrand"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home" data-lang="navHome"></a></li>
+          <li class="nav-item"><a class="nav-link" href="#research" data-lang="navResearch"></a></li>
+          <li class="nav-item"><a class="nav-link" href="#people" data-lang="navPeople"></a></li>
+          <li class="nav-item"><a class="nav-link" href="#activities" data-lang="navActivities"></a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" data-lang="navContact"></a></li>
+        </ul>
+        <div class="language-switch ms-lg-3 d-flex gap-2 mt-3 mt-lg-0">
+          <button class="btn btn-outline-secondary btn-sm" onclick="setLanguage('en')" data-lang="langEnglish">EN</button>
+          <button class="btn btn-outline-secondary btn-sm" onclick="setLanguage('zh')" data-lang="langChinese">中文</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- 页面主体：包含首页英雄区与内容块 -->
+  <main class="container py-5">
+        <!-- 英雄区：实验室名称、标语、简介与CTA按钮 -->
+    <section id="home" class="hero mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <!-- <div class="badge-soft mb-3" data-lang="heroBadge"></div> -->
+          <h1 class="hero-title" data-lang="homepageTitle"></h1>
+          <p class="hero-tagline mb-4" data-lang="homepageTagline"></p>
+          <p class="mb-4" data-lang="homepageIntro"></p>
+          <div class="d-flex flex-wrap gap-3">
+            <a class="btn btn-outline-primary" href="#research" data-lang="heroBtnResearch"></a>
+            <a class="btn btn-outline-primary" href="#people" data-lang="heroBtnTeam"></a>
+            <a class="btn btn-outline-primary" href="#activities" data-lang="heroBtnActivities"></a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="/assets/Images/Image-robots.jpeg" class="img-fluid rounded-4 shadow-sm img-banner" alt="AAIL banner" />
+        </div>
+      </div>
+    </section>
+
+        <!-- 研究方向与最新发表 -->
+    <section class="mb-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3" data-lang="investigateTitle"></h2>
+          <p class="section-lead mb-4" data-lang="investigateLead"></p>
+          <div class="row row-cols-1 row-cols-sm-2 g-3">
+            <div class="col">
+              <div class="p-3 border rounded-4 h-100 card-shadow">
+                <h6 class="fw-bold mb-1" data-lang="cardAgenticTitle"></h6>
+                <p class="mb-0 small text-muted" data-lang="cardAgenticDesc"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-3 border rounded-4 h-100 card-shadow">
+                <h6 class="fw-bold mb-1" data-lang="cardMultiTitle"></h6>
+                <p class="mb-0 small text-muted" data-lang="cardMultiDesc"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-3 border rounded-4 h-100 card-shadow">
+                <h6 class="fw-bold mb-1" data-lang="cardLLMTitle"></h6>
+                <p class="mb-0 small text-muted" data-lang="cardLLMDesc"></p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="p-3 border rounded-4 h-100 card-shadow">
+                <h6 class="fw-bold mb-1" data-lang="cardResponsibleTitle"></h6>
+                <p class="mb-0 small text-muted" data-lang="cardResponsibleDesc"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 border rounded-4 h-100 bg-white card-shadow">
+            <h5 class="fw-bold mb-3" data-lang="highlightsTitle"></h5>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <span class="timeline-dot mt-2"></span>
+                <div>
+                  <div class="fw-semibold" data-lang="highlight1Title"></div>
+                  <div class="text-muted small" data-lang="highlight1Desc"></div>
+                </div>
+              </li>
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <span class="timeline-dot mt-2"></span>
+                <div>
+                  <div class="fw-semibold" data-lang="highlight2Title"></div>
+                  <div class="text-muted small" data-lang="highlight2Desc"></div>
+                </div>
+              </li>
+              <li class="d-flex align-items-start gap-3">
+                <span class="timeline-dot mt-2"></span>
+                <div>
+                  <div class="fw-semibold" data-lang="highlight3Title"></div>
+                  <div class="text-muted small" data-lang="highlight3Desc"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-------------------------------------------------- 代表性研究 ---------------------------------------------->
+    <section id="research" class="mb-5">
+      <div class="mb-5 text-center">
+        <h1 class="section-title mb-3" data-lang="researchPageTitle"></h1>
+        <p class="section-lead mx-auto" data-lang="researchPageLead"></p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/chatdev.png" class="card-img-top" alt="ChatDev" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research1Title"></h5>
+              <p class="card-text" data-lang="research1Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://aclanthology.org/2024.acl-long.810/"
+                  target="_blank"
+                  class="btn btn-outline-primary"
+                  data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/co-learning.png" class="card-img-top" alt="Co-Learning" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research2Title"></h5>
+              <p class="card-text" data-lang="research2Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://aclanthology.org/2024.acl-long.305/"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/macnet.png" class="card-img-top" alt="MacNet" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research3Title"></h5>
+              <p class="card-text" data-lang="research3Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://arxiv.org/abs/2406.07155"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/puppeteer.png" class="card-img-top" alt="Puppeteer" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research4Title"></h5>
+              <p class="card-text" data-lang="research4Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://arxiv.org/abs/2505.19591"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/iagents.png" class="card-img-top" alt="iAgents" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research5Title"></h5>
+              <p class="card-text" data-lang="research5Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://neurips.cc/virtual/2024/poster/93728"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/ctc.png" class="card-img-top" alt="Croto" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research6Title"></h5>
+              <p class="card-text" data-lang="research6Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://arxiv.org/abs/2406.08979"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/agentverse.png" class="card-img-top" alt="AgentVerse" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research7Title"></h5>
+              <p class="card-text" data-lang="research7Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://iclr.cc/virtual/2024/poster/19109"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/ioa.png" class="card-img-top" alt="IoA" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research8Title"></h5>
+              <p class="card-text" data-lang="research8Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://arxiv.org/abs/2407.07061"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/optima.png" class="card-img-top" alt="Optima" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research9Title"></h5>
+              <p class="card-text" data-lang="research9Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://arxiv.org/abs/2410.08115"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/autoform.png" class="card-img-top" alt="AutoForm" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research10Title"></h5>
+              <p class="card-text" data-lang="research10Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://aclanthology.org/2024.findings-emnlp.623/"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/Images/PaperImage/ebook.png" class="card-img-top" alt="Multi-Agent Research eBook" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="research11Title"></h5>
+              <p class="card-text" data-lang="research11Desc"></p>
+              <div class="d-flex justify-content-center mt-2">
+                <a href="https://thinkwee.top/multiagent_ebook/"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    data-lang="paperlink"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!----------------------------------团队成员---------------------------------------------------->
+    <section id="people" class="mb-5">
+      <div class="mb-5 text-center">
+        <h1 class="section-title mb-3" data-lang="peopleTitle"></h1>
+        <p class="section-lead mx-auto" data-lang="peopleLead"></p>
+      </div>
+
+      <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h3 class="h4 fw-bold mb-0" data-lang="facultyTitle"></h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/Images/People/qianchen.png" style="max-height: 200px; width: auto; margin: 0 auto;" class="card-img-top" alt="Faculty portrait" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="ProfqianchenName"></h5>
+                <p class="text-muted mb-2" data-lang="rolePI"></p>
+                <p class="card-text" data-lang="ProfqianchenDesc"></p>
+                <a href="#" class="btn btn-sm btn-outline-primary" data-lang="profile"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h3 class="h4 fw-bold mb-0" data-lang="phdTitle"></h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top" alt="PhD student" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="doc1Name"></h5>
+                <p class="text-muted mb-2" data-lang="rolePhD"></p>
+                <p class="card-text" data-lang="doc1Desc"></p>
+                <a href="https://hendrick-wang.github.io/" class="btn btn-sm btn-outline-primary" data-lang="profile" 
+                  target="_blank" rel="noopener noreferrer"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="PhD student" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="jamalName"></h5>
+                <p class="text-muted mb-2" data-lang="rolePhD"></p>
+                <p class="card-text" data-lang="jamalDesc"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="PhD student" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="saraName"></h5>
+                <p class="text-muted mb-2" data-lang="rolePhD"></p>
+                <p class="card-text" data-lang="saraDesc"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h3 class="h4 fw-bold mb-0" data-lang="mastersTitle"></h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="Master's student" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="priyaName"></h5>
+                <p class="text-muted mb-2" data-lang="roleMasters"></p>
+                <p class="card-text" data-lang="priyaDesc"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="Master's student" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="leoName"></h5>
+                <p class="text-muted mb-2" data-lang="roleMasters"></p>
+                <p class="card-text" data-lang="leoDesc"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="Master's student" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="hannahName"></h5>
+                <p class="text-muted mb-2" data-lang="roleMasters"></p>
+                <p class="card-text" data-lang="hannahDesc"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h3 class="h4 fw-bold mb-0" data-lang="engineersTitle"></h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="Research engineer" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="noahName"></h5>
+                <p class="text-muted mb-2" data-lang="roleEngineer"></p>
+                <p class="card-text" data-lang="noahDesc"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="Research assistant" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="aishaName"></h5>
+                <p class="text-muted mb-2" data-lang="roleAssistant"></p>
+                <p class="card-text" data-lang="aishaDesc"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h3 class="h4 fw-bold mb-0" data-lang="internsTitle"></h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="Intern" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="evanName"></h5>
+                <p class="text-muted mb-2" data-lang="roleIntern"></p>
+                <p class="card-text" data-lang="evanDesc"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-shadow">
+              <img src="/assets/img/person-placeholder.svg" class="card-img-top img-placeholder" alt="Intern" />
+              <div class="card-body">
+                <h5 class="card-title mb-1" data-lang="sofiaName"></h5>
+                <p class="text-muted mb-2" data-lang="roleIntern"></p>
+                <p class="card-text" data-lang="sofiaDesc"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+        <!------------------------------------- 活动与事件 ----------------------------------------->
+    <section id="activities" class="mb-5">
+      <div class="mb-5 text-center">
+        <h1 class="section-title mb-3" data-lang="activitiesTitle"></h1>
+        <p class="section-lead mx-auto" data-lang="activitiesLead"></p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/img/activity-placeholder.svg" class="card-img-top img-placeholder" alt="Lab retreat" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="activity1Title"></h5>
+              <p class="card-text" data-lang="activity1Desc"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/img/activity-placeholder.svg" class="card-img-top img-placeholder" alt="Seminar" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="activity2Title"></h5>
+              <p class="card-text" data-lang="activity2Desc"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/img/activity-placeholder.svg" class="card-img-top img-placeholder" alt="Workshop" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="activity3Title"></h5>
+              <p class="card-text" data-lang="activity3Desc"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/img/activity-placeholder.svg" class="card-img-top img-placeholder" alt="Reading group" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="activity4Title"></h5>
+              <p class="card-text" data-lang="activity4Desc"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/img/activity-placeholder.svg" class="card-img-top img-placeholder" alt="Conference" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="activity5Title"></h5>
+              <p class="card-text" data-lang="activity5Desc"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-shadow">
+            <img src="/assets/img/activity-placeholder.svg" class="card-img-top img-placeholder" alt="Community meetup" />
+            <div class="card-body">
+              <h5 class="card-title" data-lang="activity6Title"></h5>
+              <p class="card-text" data-lang="activity6Desc"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!--------------------------------------------- 联系方式 -------------------------------------->
+    <section id="contact" class="mb-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <h1 class="section-title mb-3" data-lang="contactTitle"></h1>
+          <p class="section-lead mb-4" data-lang="contactLead"></p>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-3">
+              <strong data-lang="contactEmailLabel"></strong>
+              <a href="qianc@sjtu.edu.cn" data-lang="contactEmailValue"></a>
+            </li>
+            <li class="mb-3">
+              <strong data-lang="contactAddressLabel"></strong>
+              <span data-lang="contactAddressValue"></span>
+            </li>
+            <li class="mb-3">
+              <strong data-lang="contactOfficeLabel"></strong>
+              <span data-lang="contactOfficeValue"></span>
+            </li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:aail@research.example" data-lang="contactButton"></a>
+        </div>
+        <div class="col-lg-6">
+          <div class="map-placeholder d-flex align-items-center justify-content-center text-center p-4">
+            <div>
+              <h6 class="fw-bold" data-lang="mapTitle"></h6>
+              <p class="mb-0 text-muted" data-lang="mapDesc"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- 页脚：版权与副标题 -->
+  <footer class="footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <span class="text-muted" data-lang="footerCopy"></span>
+      <div class="small text-muted" data-lang="footerTagline"></div>
+    </div>
+  </footer>
+
+    <!-- 脚本：Bootstrap、通用交互、语言切换 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/lang.js"></script>
+
+</body>
+</html>
