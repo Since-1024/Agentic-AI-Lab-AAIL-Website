@@ -1,3 +1,4 @@
+// Language switcher
 function setLanguage(lang){
   fetch('/assets/lang/'+lang+'.json')
     .then(r=>r.json())

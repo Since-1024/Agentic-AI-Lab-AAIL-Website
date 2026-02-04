@@ -1,7 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { defineConfig } from 'vite'
 
 
 const rootDir = dirname(fileURLToPath(import.meta.url));
@@ -27,7 +26,6 @@ const htmlPartials = () => ({
 
 export default {
   base: '/Agentic-AI-Lab-AAIL-Website/',
-
   root: 'src',
   publicDir: '../public',
   plugins: [htmlPartials()],
@@ -37,9 +35,10 @@ export default {
     rollupOptions: {
       input: {
         index: resolve(rootDir, 'src/index.html'),
-        products: resolve(rootDir, 'src/products.html'),
-        research: resolve(rootDir, 'src/research.html'),
-        people: resolve(rootDir, 'src/people.html'),
+        products: resolve(rootDir, 'src/products-fullPage.html'),
+        research: resolve(rootDir, 'src/research-fullPage.html'),
+        people: resolve(rootDir, 'src/people-fullPage.html'),
+        activities: resolve(rootDir, 'src/activities-fullPage.html')
       }
     }
   }
