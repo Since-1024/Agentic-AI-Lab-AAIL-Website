@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { defineConfig } from 'vite'
+
 
 const rootDir = dirname(fileURLToPath(import.meta.url));
 
@@ -24,6 +26,8 @@ const htmlPartials = () => ({
 });
 
 export default {
+  base: '/Agentic-AI-Lab-AAIL-Website/',
+
   root: 'src',
   publicDir: '../public',
   plugins: [htmlPartials()],
@@ -40,3 +44,4 @@ export default {
     }
   }
 };
+
