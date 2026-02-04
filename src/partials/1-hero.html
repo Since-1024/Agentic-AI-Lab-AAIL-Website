@@ -3,10 +3,13 @@
       <div class="row align-items-center g-4">
         <div class="col-lg-6">
           <!-- <div class="badge-soft mb-3" data-lang="heroBadge"></div> -->
-          <h1 class="hero-title" data-lang="homepageTitle"></h1>
-          <p class="hero-tagline mb-4" data-lang="homepageTagline"></p>
-          <p class="mb-4" data-lang="homepageIntro"></p>
-          <div class="d-flex flex-wrap gap-3">
+          <h1 class="fw-black display-5 lh-sm text-dark">
+            Agentic AI Lab <span class="text-primary">(AAIL)</span>
+          </h1>
+          <p class="fs-4 fw-medium text-muted-dark lh-base" data-lang="homepageTagline"></p>
+          <p class="fs-6 mb-4" data-lang="homepageIntro"></p>
+          <!-- 三个链接按钮 -->
+          <div class="d-flex flex-wrap gap-3 mt-5">
             <a class="btn btn-outline-primary" href="#research" data-lang="heroBtnResearch"></a>
             <a class="btn btn-outline-primary" href="#people" data-lang="heroBtnTeam"></a>
             <a class="btn btn-outline-primary" href="#activities" data-lang="heroBtnActivities"></a>
@@ -17,35 +20,57 @@
         </div>
       </div>
 
-      <div class="row mt-3">
-        <h2 class="section-title mb-3" data-lang="investigateTitle"></h2>
-        <p class="section-lead mb-4" data-lang="investigateLead"></p>
-        <div class="row row-cols-2 row-cols-sm-4 g-3">
-          <div class="col">
-            <div class="p-3 border rounded-4 h-100 card-shadow">
-              <h6 class="fw-bold mb-1" data-lang="card1Title"></h6>
-              <p class="mb-0 small text-muted" data-lang="card1Desc"></p>
+      <!-- 介绍研究方向，包括4个卡片 -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="section-header mb-2">
+            <h2 class="section-title mb-3"><span class="title-bar"></span>
+              <span data-lang="investigateTitle"></span>
+            </h2>
+            <p class="section-lead mb-2" data-lang="investigateLead"></p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="research-card border border-1 rounded-4 p-4 h-100">
+              <div class="icon-wrap bg-purple text-purple mb-3">
+                <i class="bi bi-robot"></i>
+              </div>
+              <h5 class="fw-semibold mb-2" data-lang="card1Title"></h5>
+              <p class="text-secondary mb-0" data-lang="card1Desc"></p>
             </div>
           </div>
-          <div class="col">
-            <div class="p-3 border rounded-4 h-100 card-shadow">
-              <h6 class="fw-bold mb-1" data-lang="card2Title"></h6>
-              <p class="mb-0 small text-muted" data-lang="card2Desc"></p>
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="research-card border border-1 rounded-4 p-4 h-100">
+              <div class="icon-wrap bg-blue text-blue mb-3">
+                <i class="bi bi-diagram-3"></i>
+              </div>
+              <h5 class="fw-semibold mb-2" data-lang="card2Title"></h5>
+              <p class="text-secondary mb-0" data-lang="card2Desc"></p>
             </div>
           </div>
-          <div class="col">
-            <div class="p-3 border rounded-4 h-100 card-shadow">
-              <h6 class="fw-bold mb-1" data-lang="card3Title"></h6>
-              <p class="mb-0 small text-muted" data-lang="card3Desc"></p>
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="research-card border border-1 rounded-4 p-4 h-100">
+              <div class="icon-wrap bg-cyan text-cyan mb-3">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <h5 class="fw-semibold mb-2" data-lang="card3Title"></h5>
+              <p class="text-secondary mb-0" data-lang="card3Desc"></p>
             </div>
           </div>
-          <div class="col">
-            <div class="p-3 border rounded-4 h-100 card-shadow">
-              <h6 class="fw-bold mb-1" data-lang="card4Title"></h6>
-              <p class="mb-0 small text-muted" data-lang="card4Desc"></p>
+          <!-- Card 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="research-card border border-1 rounded-4 p-4 h-100">
+              <div class="icon-wrap bg-emerald text-emerald mb-3">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h5 class="fw-semibold mb-2" data-lang="card4Title"></h5>
+              <p class="text-secondary mb-0" data-lang="card4Desc"></p>
             </div>
           </div>
         </div>
       </div>
-        
     </section>

@@ -2,11 +2,12 @@
   --aail-blue: #0d6efd;
   --aail-dark: #0b275a;
   --aail-light: #f7f9fc;
-  --aail-gray: #6c757d;
+  --aail-gray: #495055;
 }
 
+
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   background: #ffffff;
   color: #1f2d3d;
   line-height: 1.7;
@@ -149,4 +150,161 @@ body > main,
 body > footer {
   position: relative;
   z-index: 1;
+}
+
+/* 接近 Tailwind 的 font-extrabold */
+.fw-extrabold {
+  font-weight: 800;
+}
+
+/* 接近 Tailwind 的 font-medium */
+.fw-medium {
+  font-weight: 500;
+}
+
+/* 卡片整体 */
+.research-card {
+  transition: all 0.25s ease;
+  background-color: #fff;
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* 图标容器 */
+.icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* 颜色体系（接近 Tailwind） */
+.bg-purple { background-color: rgba(168, 85, 247, 0.12); }
+.text-purple { color: #a855f7; }
+
+.bg-blue { background-color: rgba(59, 130, 246, 0.12); }
+.text-blue { color: #3b82f6; }
+
+.bg-cyan { background-color: rgba(34, 211, 238, 0.12); }
+.text-cyan { color: #06b6d4; }
+
+.bg-emerald { background-color: rgba(16, 185, 129, 0.12); }
+.text-emerald { color: #10b981; }
+
+/* hover 时边框轻微染色 */
+.research-card:hover {
+  border-color: #dee2e6;
+}
+
+/* 蓝色竖线 */
+.title-bar{
+  display: inline-block;   
+  width: 6px;
+  height: 36px;
+  background: #0d6efd;
+  border-radius: 999px;
+  margin-right: 10px;     
+  vertical-align: middle;    
+}
+
+/* 中深灰色 */
+.text-muted-dark {
+  color: #495057; /* Bootstrap gray-700 */
+}
+
+.fw-black {
+  font-weight: 1000;
+}
+
+.img-decorated {
+  border-radius: 18px;              /* 边角钝化 */
+  border: 8px solid rgba(4, 45, 20, 0.08); /* 细边框 */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.card-img-link {
+  display: block;
+}
+
+.card-img-link img {
+  max-height: 200px;
+  width: auto;
+  margin: 0 auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* 悬停反馈（非常重要） */
+.card-img-link:hover img {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* 让 card 本身“隐形”，像示例图那样只有照片在浮起来 */
+.people-card {
+  background: transparent;
+  /* text-align: center;  */
+}
+
+/* 点击区域不显示下划线 */
+.people-img-link {
+  display: inline-flex;
+  /* width: fit-content; */
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* 照片框：统一尺寸 + 圆角 + 白底 + 阴影 */
+.people-photo {
+  width: 200px;        /* 固定宽度 */
+  height: 250px;
+  margin: 0 auto 18px;        /* 居中 + 和文字拉开距离 */
+  border-radius: 16px;        /* 圆角 */
+  overflow: hidden;           /* 圆角裁切图片 */
+  background: #fff;           /* 照片白底 */
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+}
+
+/* 统一图片比例：示例接近 4:5（更像照片卡） */
+.people-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;        /* 关键：统一高度 */
+  object-fit: cover;          /* 填满并裁切，保证好看 */
+  display: block;
+}
+
+/* 悬停：轻微抬起，像示例那种“可点击” */
+.people-img-link:hover .people-photo {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+}
+
+/* 文本排版，接近示例的层级感 */
+.people-body {
+  padding-top: 0;
+}
+
+.people-name {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.people-role {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.people-desc {
+  color: rgba(0,0,0,0.65);
+  line-height: 1.75;
+  margin: 0 auto;
+  max-width: 22em;            /* 让描述不要太“散”，像示例那样收一点 */
 }

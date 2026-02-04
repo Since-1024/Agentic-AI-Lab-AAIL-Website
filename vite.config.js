@@ -33,6 +33,9 @@ export default {
     rollupOptions: {
       input: {
         index: resolve(rootDir, 'src/index.html'),
+        products: resolve(rootDir, 'src/products.html'),
+        research: resolve(rootDir, 'src/research.html'),
+        people: resolve(rootDir, 'src/people.html'),
       }
     }
   }
