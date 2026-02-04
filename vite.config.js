@@ -25,7 +25,7 @@ const htmlPartials = () => ({
 });
 
 export default {
-  base: '/Agentic-AI-Lab-AAIL-Website/',
+  // base: '/Agentic-AI-Lab-AAIL-Website/',
   root: 'src',
   publicDir: '../public',
   plugins: [htmlPartials()],
