@@ -50,8 +50,10 @@
   "product1Desc": "一个多智能体协作的软件开发平台，支持从需求分析到代码生成与测试的全流程自动化。",
   "product2Title": "TeachMaster",
   "product2Desc": "一个智能教学助理，能够根据教师的需求，生成定制化教学视频",
-  "product3Title": "产品合集",
-  "product3Desc": "浏览更多研究工具与产品原型，了解最新发布与演示。",
+  "product3Title": "WeakAccept",
+  "product3Desc": "由人工智能代理驱动的自动化审稿器，可对每日 arXiv 论文进行辩论和评估。",
+  "product4Title": "ChatDev 2.0",
+  "product4Desc": "通过 LLM 驱动的多智能体协作（开源系统）进行开发的零代码平台。",
   "productlink": "产品链接",
 
   "researchPageTitle": "代表性研究",
@@ -79,6 +81,10 @@
   "research10Desc": "超越自然语言：大型语言模型利用其他形式数据以实现更强大的推理和交流能力(EMNLP-2024)",
   "research11Title": "Multi-Agent Research eBook",
   "research11Desc":"基于大型语言模型的多智能体研究的全面概述",
+  "research12Title": "Towards a Science of Collective AI: LLM-based Multi-Agent Systems Need a Transition from Blind Trial-and-Error to Rigorous Science",
+  "research12Desc": "推动基于 LLM 的多智能体系统从试错法走向严谨科学的理论框架。",
+  "research13Title": "AgentXRay",
+  "research13Desc": "通过工作流重构对代理系统进行白盒化，以解释黑盒代理。",
   "paperlink": "文章",
 
   "peopleTitle": "团队成员",
