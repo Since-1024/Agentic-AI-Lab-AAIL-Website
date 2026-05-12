@@ -47,7 +47,7 @@ a:hover {
 .hero {
   background: linear-gradient(110deg, rgba(4, 82, 62, 0.12), rgba(72, 3, 73, 0.12));
   border-radius: 18px;
-  padding: 3rem;
+  padding: 2rem 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -126,9 +126,9 @@ a:hover {
 
 .img-banner {
   width: 100%;
-  max-width: 520px;   /* 控制最大显示宽度 */
-  height: 320px;      /* 固定显示高度 */
-  object-fit: cover;  /* 等比裁剪，不拉伸 */
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
 }
 
 
@@ -365,6 +365,19 @@ body > footer {
 .research-card {
   transition: all 0.25s ease;
   background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.research-card::before {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px 16px 0 0;
 }
 
 .research-card:hover {
@@ -374,32 +387,40 @@ body > footer {
 
 /* 图标容器 */
 .icon-wrap {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
-/* 颜色体系（接近 Tailwind） */
-.bg-purple { background-color: rgba(168, 85, 247, 0.12); }
+/* 颜色体系 */
+.bg-purple { background-color: rgba(168, 85, 247, 0.10); }
 .text-purple { color: #a855f7; }
 
-.bg-blue { background-color: rgba(59, 130, 246, 0.12); }
+.bg-blue { background-color: rgba(59, 130, 246, 0.10); }
 .text-blue { color: #3b82f6; }
 
-.bg-cyan { background-color: rgba(34, 211, 238, 0.12); }
+.bg-cyan { background-color: rgba(34, 211, 238, 0.10); }
 .text-cyan { color: #06b6d4; }
 
-.bg-emerald { background-color: rgba(16, 185, 129, 0.12); }
+.bg-emerald { background-color: rgba(16, 185, 129, 0.10); }
 .text-emerald { color: #10b981; }
 
-/* hover 时边框轻微染色 */
-.research-card:hover {
-  border-color: #dee2e6;
-}
+/* 每张卡片顶部彩色线 */
+.research-card.card-purple::before { background: linear-gradient(90deg, #a855f7, #c084fc); }
+.research-card.card-purple { background: linear-gradient(160deg, rgba(168,85,247,0.06) 0%, #fff 60%); }
+
+.research-card.card-blue::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+.research-card.card-blue { background: linear-gradient(160deg, rgba(59,130,246,0.06) 0%, #fff 60%); }
+
+.research-card.card-cyan::before { background: linear-gradient(90deg, #06b6d4, #22d3ee); }
+.research-card.card-cyan { background: linear-gradient(160deg, rgba(34,211,238,0.06) 0%, #fff 60%); }
+
+.research-card.card-emerald::before { background: linear-gradient(90deg, #10b981, #34d399); }
+.research-card.card-emerald { background: linear-gradient(160deg, rgba(16,185,129,0.06) 0%, #fff 60%); }
 
 /* 蓝色竖线 */
 .title-bar{
