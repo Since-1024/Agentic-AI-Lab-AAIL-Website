@@ -35,7 +35,7 @@
   "cardResponsibleTitle": "Responsible AI",
   "cardResponsibleDesc": "Robustness, evaluation, and human-centered deployment practices.",
 
-  "highlightsTitle": "Recent publications",
+  "highlightsTitle": "News",
   "highlight1Title": "Benchmarking emergent cooperation in LLM agents",
   "highlight1Desc": "New evaluation suite for coordination and trust-building behaviors.",
   "highlight2Title": "Hybrid policy learning for embodied decision-making",

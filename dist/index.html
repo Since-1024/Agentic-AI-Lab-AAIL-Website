@@ -16,7 +16,7 @@
     <!-- 顶部导航栏：全站共享的导航与语言切换 -->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
     <div class="container py-2">
-      <a class="navbar-brand" href="#home" data-lang="navBrand"></a>
+      <a class="navbar-brand" href="./index.html#home" data-lang="navBrand"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,7 +47,7 @@
         <div class="col-lg-6">
           <!-- <div class="badge-soft mb-3" data-lang="heroBadge"></div> -->
           <h1 class="fw-black display-5 lh-sm text-dark">
-            Agentic AI Lab <span class="text-primary">(AAIL)</span>
+            <span class="hero-title-gradient">Agentic AI Lab</span> <span class="text-primary">(AAIL)</span>
           </h1>
           <p class="fs-4 fw-medium text-muted-dark lh-base" data-lang="homepageTagline"></p>
           <p class="fs-6 mb-4" data-lang="homepageIntro"></p>
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <img src="assets/Images/Image-robots.jpeg" class="img-fluid rounded-4 shadow-sm img-banner" alt="AAIL banner" />
+          <img src="assets/Images/Image-robots.jpeg" class="img-fluid rounded-4 img-banner hero-img-glow" alt="AAIL banner" />
         </div>
       </div>
 
@@ -118,37 +118,86 @@
       </div>
     </section>
 
-        <!-- 研究方向与最新发表 -->
+        <!-- 最新动态 -->
     <section id="news" class="mb-5">
-      <div class="row g-4 align-items-center">
-        
-        <div class="col">
-          <div class="p-4 border rounded-4 h-100 bg-white card-shadow">
-            <h5 class="fw-bold mb-3" data-lang="highlightsTitle"></h5>
-            <ul class="list-unstyled mb-0">
-              <li class="d-flex align-items-start gap-3 mb-3">
-                <span class="timeline-dot mt-2"></span>
-                <div>
-                  <div class="fw-semibold" data-lang="highlight1Title"></div>
-                  <div class="text-muted small" data-lang="highlight1Desc"></div>
+      <div class="section-header mb-4">
+        <h2 class="section-title mb-3">
+          <span class="title-bar"></span>
+          <span data-lang="highlightsTitle"></span>
+        </h2>
+      </div>
+
+      <div class="p-4 border rounded-4 bg-white news-scroll-box">
+        <div class="news-timeline">
+
+          <!-- 2026-05 TeachMaster 2.0 -->
+          <div class="news-item">
+            <div class="news-date">2026-05</div>
+            <div class="news-connector"><span class="news-dot"></span></div>
+            <div class="news-content">
+              <div class="news-text">
+                <p>🎉 <strong>TeachMaster 2.0 正式上线！</strong></p>
+                <p>TeachMaster 2.0 正式上线，带来五大升级：极简的课程准备、MOOC 级别的视觉质量、速度提升 50%、基于聊天功能的编辑以及专属资源库，全面提升 AI 课程创建的效率。</p>
+                <div class="news-links mt-2">
+                  <a href="#" target="_blank">📄 论文</a>
+                  <a href="https://www.teachmaster.cn/" target="_blank">🖥️ 网站</a>
                 </div>
-              </li>
-              <li class="d-flex align-items-start gap-3 mb-3">
-                <span class="timeline-dot mt-2"></span>
-                <div>
-                  <div class="fw-semibold" data-lang="highlight2Title"></div>
-                  <div class="text-muted small" data-lang="highlight2Desc"></div>
-                </div>
-              </li>
-              <li class="d-flex align-items-start gap-3">
-                <span class="timeline-dot mt-2"></span>
-                <div>
-                  <div class="fw-semibold" data-lang="highlight3Title"></div>
-                  <div class="text-muted small" data-lang="highlight3Desc"></div>
-                </div>
-              </li>
-            </ul>
+              </div>
+              <div class="news-media">
+                <!-- 替换为实际视频 URL -->
+                <video controls class="rounded-3 w-100">
+                  <source src="public/assets/Videos/TeachMaster.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
           </div>
+
+          <!-- 2026-05 AgentXRay ICML'26 -->
+          <div class="news-item">
+            <div class="news-date">2026-05</div>
+            <div class="news-connector"><span class="news-dot"></span></div>
+            <div class="news-content news-content-solo">
+              <div class="news-text">
+                <p>🎉 我们的 <strong>AgentXRay</strong> 论文已被
+                  <a href="https://icml.cc/" target="_blank"><strong>ICML'26</strong></a> 接收！
+                  📄 <a href="https://arxiv.org/abs/2602.05353" target="_blank">论文</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2026-04 TeachMaster ACL'26 -->
+          <div class="news-item">
+            <div class="news-date">2026-04</div>
+            <div class="news-connector"><span class="news-dot"></span></div>
+            <div class="news-content news-content-solo">
+              <div class="news-text">
+                <p>🎉 我们的 <strong>TeachMaster</strong> 论文已被
+                  <a href="https://2026.aclweb.org/" target="_blank"><strong>ACL'26 行业论坛</strong></a> 接收！
+                  📄 <a href="#" target="_blank">论文链接</a>
+                  🖥️ <a href="https://www.teachmaster.cn/" target="_blank">网站链接</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2026-02 Collective AI Science -->
+          <div class="news-item">
+            <div class="news-date">2026-02</div>
+            <div class="news-connector"><span class="news-dot"></span></div>
+            <div class="news-content">
+              <div class="news-text">
+                <p>🔬 新论文：迈向集体人工智能科学：基于LLM的多智能体系统需要从盲目试错过渡到严谨科学方法。我们引入了一个理论框架，旨在推动基于LLM的多智能体系统从盲目试错过渡到更严谨的科学范式，以研究集体智能。
+                  🔗 <a href="https://arxiv.org/abs/2602.05289" target="_blank">论文</a>
+                </p>
+              </div>
+              <div class="news-media">
+                <!-- 需添加 position.png 到 public/assets/Images/PaperImage/ -->
+                <img src="assets/Images/PaperImage/position.png" alt="Collective AI Science" class="rounded-3" />
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
