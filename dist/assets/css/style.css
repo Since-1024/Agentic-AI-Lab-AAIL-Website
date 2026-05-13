@@ -558,3 +558,60 @@ body > footer {
   margin: 0 auto;
   max-width: 22em;            /* 让描述不要太“散”，像示例那样收一点 */
 }
+/* ===== 固定右下角吉祥物小人 ===== */
+.mascot-widget {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.mascot-img {
+  width: 90px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.mascot-bubble {
+  position: relative;
+  background: #fff;
+  border: 2px solid #1a1a2e;
+  border-radius: 12px;
+  padding: 7px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 0 #1a1a2e;
+}
+
+/* 气泡底部三角（边框层） */
+.mascot-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 11px 7px 0;
+  border-style: solid;
+  border-color: #1a1a2e transparent transparent;
+}
+
+/* 气泡底部三角（填充层，遮住border） */
+.mascot-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 6px 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  z-index: 1;
+}
