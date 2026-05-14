@@ -35,11 +35,7 @@ export default {
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        index: resolve(rootDir, 'src/index.html'),
-        products: resolve(rootDir, 'src/products-fullPage.html'),
-        research: resolve(rootDir, 'src/research-fullPage.html'),
-        people: resolve(rootDir, 'src/people-fullPage.html'),
-        activities: resolve(rootDir, 'src/activities-fullPage.html')
+        index: resolve(rootDir, 'src/index.html')
       }
     }
   }
