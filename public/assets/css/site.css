@@ -18,7 +18,7 @@
 .sys-rows .rows__value { align-self: start; }
 
 /* research: six papers a year, two rows of three; every card one height */
-#research .paper > .panel { --p-h: 184px; flex: none; height: var(--p-h); min-height: 0; margin: 0 0 var(--s-3); border-radius: var(--r-lg); }
+#research .paper > .panel { --p-h: 184px; flex: none; width: 100%; justify-self: stretch; height: var(--p-h); min-height: 0; margin: 0 0 var(--s-3); border-radius: var(--r-lg); }
 #research .section-head--row > .tabs { display: flex; flex-wrap: wrap; gap: var(--s-2); max-width: none; }
 .paper { display: grid; align-content: start; gap: var(--s-2); }
 .paper > h3 { font-size: var(--t-card); }
