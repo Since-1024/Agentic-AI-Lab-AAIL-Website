@@ -1,0 +1,82 @@
+/* Page CSS for the AAIL site: only what sits inside a visual or a group and the kit leaves to the page
+   (panel heights, the paper card's links, the people tiles, the picture wall, the language button).
+   Tokens, type, buttons, grid and section heights come from assets/system.css. */
+
+/* the language button in the nav: a plain word like the nav's links */
+.lang-switch { background: none; border: 0; cursor: pointer; font: inherit; min-height: 44px; padding-inline: var(--s-2); }
+
+/* figures in panels: a paper's own figure, whole, inside the panel's box */
+.panel--fig > .frame__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: var(--s-4); }
+:root .panel.panel--fig { background: var(--surface); background-image: none; }
+
+/* directions: the panel first, one height for the row, so the four line up */
+#directions .card > .panel { --p-h: 300px; flex: none; height: var(--p-h); min-height: 0; margin: 0 0 var(--s-5); border-radius: var(--r-lg); }
+
+/* systems: the demo video fills its column */
+.frame--video { --ratio: 0px; height: 100%; min-height: 360px; background: var(--g-dark, #0b1324); }
+.frame--video > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.sys-rows .rows__value { align-self: start; }
+
+/* research: six papers a year, two rows of three; every card one height */
+#research .paper > .panel { --p-h: 184px; flex: none; height: var(--p-h); min-height: 0; margin: 0 0 var(--s-3); border-radius: var(--r-lg); }
+#research .section-head--row > .tabs { display: flex; flex-wrap: wrap; gap: var(--s-2); max-width: none; }
+.paper { display: grid; align-content: start; gap: var(--s-2); }
+.paper > h3 { font-size: var(--t-card); }
+.paper > p { color: var(--ink); }
+.paper > .paper__venue { color: var(--muted); }
+.paper__links { display: flex; gap: var(--s-5); }
+.paper-rows { display: grid; }
+#research .group .tabs { align-self: end; }
+
+/* news: date, item, links */
+.news .news__date { font-family: var(--font-mono); font-weight: 400; color: var(--muted); font-size: var(--t-small); }
+.news > li { grid-template-columns: 88px minmax(0, 1fr) auto; }
+.news > li > p { grid-column: 2; grid-row: 1; }
+.news .rows__value { grid-column: 3; display: flex; gap: var(--s-4); }
+
+/* people: the lead's photograph beside the words; every other person a portrait tile */
+.person-tile { gap: var(--s-3); text-decoration: none; }
+.person-tile h3, .lead-tile h3 { font: 500 var(--t-body)/1.4 var(--font-text); }
+.person-tile p { margin: 0; }
+.lead-tile { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); align-items: start; text-decoration: none; color: inherit; }
+.lead-tile h3 { font-size: var(--t-card); }
+.lead-tile p { margin: 0; }
+.people-rest { display: grid; gap: var(--s-6); align-content: start; }
+
+/* life: a picture wall, line to line, 2px apart */
+.wall { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px; }
+.wall__cell { margin: 0; overflow: hidden; aspect-ratio: 4 / 3; background: var(--surface); }
+.wall__cell > img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 600ms var(--ease, ease); }
+.wall__cell:hover > img { transform: scale(1.03); }
+
+/* the statement: the label above it, the words large across the wrap */
+#belief .t-label { margin-bottom: var(--s-7); color: var(--muted); font-family: var(--font-text); font-size: var(--t-label); font-weight: 500; letter-spacing: 0; }
+#belief .mo-wh__text { font-size: clamp(32px, 2.2vw + 22px, 64px); line-height: 1.18; max-width: 22em; }
+
+/* the closing: the contact column is plain text */
+.closing__links .footer__plain { color: var(--muted); }
+
+@media (max-width: 1023px) {
+  .lead-tile { grid-template-columns: 1fr; }
+  .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 639px) {
+  #directions .panel { --p-h: 180px; }
+  .news > li { grid-template-columns: minmax(0, 1fr); }
+  .news > li > p, .news .rows__value { grid-column: 1; grid-row: auto; }
+  .frame--video { min-height: 220px; }
+}
+
+/* the closing word: the lab's name is 14 letters, so it is sized smaller than the kit's 8-letter word, and its line is tall enough not to clip */
+.closing .close__word { font-size: clamp(44px, 8.6vw, 128px); line-height: 1.05; padding-top: .06em; }
+
+@media (max-width: 639px) {
+  /* the nav: the language word and the menu fit; joining is in the closing */
+  .nav__actions > .btn { display: none; }
+  /* the closing call stacks */
+  .closing__cta > .section-head--split { flex-direction: column; align-items: flex-start; }
+  .closing__cta > .section-head--split > div { min-width: 0; max-width: 100%; }
+  /* systems: the video at its own shape under the list */
+  .frame--video { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
+  #systems { --hm: 2; }
+}

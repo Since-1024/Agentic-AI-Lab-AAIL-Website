@@ -1,25 +1,41 @@
-  <!-- 顶部导航栏：全站共享的导航与语言切换 -->
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
-    <div class="container py-2">
-      <a class="navbar-brand" href="./index.html#home" data-lang="navBrand"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html#home" data-lang="navHome"></a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#news" data-lang="navNews"></a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#products" data-lang="navProducts"></a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#research" data-lang="navResearch"></a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#people" data-lang="navPeople"></a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#activities" data-lang="navActivities"></a></li>
-          <li class="nav-item"><a class="nav-link" href="./index.html#contact" data-lang="navContact"></a></li>
-        </ul>
-        <div class="language-switch ms-lg-3 d-flex align-items-center mt-3 mt-lg-0">
-          <button class="lang-btn" onclick="setLanguage('en')" data-lang="langEnglish">EN</button>
-          <span class="lang-divider">/</span>
-          <button class="lang-btn" onclick="setLanguage('zh')" data-lang="langChinese">中文</button>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top" data-lang="skip"></a>
+    <a class="nav__logo" href="#top">AAIL</a>
+    <nav class="nav__links" data-lang-aria="navMainAria">
+      <div class="nav__item">
+        <a class="nav__link" href="#research"><span data-lang="navResearch"></span> <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-4" href="#research">
+              <div class="panel"><img class="frame__img" src="assets/img/video/agentic-university.jpg" alt="" loading="lazy"></div>
+              <span class="t-card" data-lang="menuCardAU"></span>
+              <span class="t-small muted" data-lang="menuCardAUDesc"></span>
+            </a>
+            <a class="menu-card span-4" href="#systems">
+              <div class="panel"><img class="frame__img" src="assets/img/video/chatdev2.jpg" alt="" loading="lazy"></div>
+              <span class="t-card" data-lang="menuCardChatDev"></span>
+              <span class="t-small muted" data-lang="menuCardChatDevDesc"></span>
+            </a>
+            <a class="menu-card span-4" href="#people">
+              <div class="panel"><img class="frame__img" src="assets/img/activity/20260718.webp" alt="" loading="lazy"></div>
+              <span class="t-card" data-lang="menuCardPeople"></span>
+              <span class="t-small muted" data-lang="menuCardPeopleDesc"></span>
+            </a>
+          </div>
         </div>
       </div>
+      <div class="nav__item"><a class="nav__link" href="#systems" data-lang="navSystems"></a></div>
+      <div class="nav__item"><a class="nav__link" href="#news" data-lang="navNews"></a></div>
+      <div class="nav__item"><a class="nav__link" href="#people" data-lang="navPeople"></a></div>
+      <div class="nav__item"><a class="nav__link" href="#life" data-lang="navActivities"></a></div>
+    </nav>
+    <div class="nav__actions">
+      <button class="nav__link lang-switch" type="button" data-lang-switch data-lang-aria="langSwitchAria"><span data-lang="langSwitch"></span></button>
+      <a class="btn btn--primary" href="#contact" data-lang="navJoin"></a>
     </div>
-  </nav>
+    <button class="nav__toggle" type="button" aria-expanded="false" data-lang-aria="menuAria">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>

@@ -1,76 +1,20 @@
-    <!-- 英雄区：实验室名称、标语、简介与CTA按钮 -->
-    <section id="home" class="hero mb-5">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <!-- <div class="badge-soft mb-3" data-lang="heroBadge"></div> -->
-          <h1 class="fw-black display-5 lh-sm text-dark">
-            <span class="hero-title-gradient">Agentic AI Lab</span> <span class="text-primary">(AAIL)</span>
-          </h1>
-          <p class="fs-5 fw-medium text-muted-dark lh-base" data-lang="homepageTagline"></p>
-          <p class="fs-6 mb-2" data-lang="homepageIntro"></p>
-          <!-- 三个链接按钮 -->
-          <div class="d-flex flex-wrap gap-3 mt-3">
-            <a class="btn btn-outline-primary" href="#research" data-lang="heroBtnResearch"></a>
-            <a class="btn btn-outline-primary" href="#people" data-lang="heroBtnTeam"></a>
-            <a class="btn btn-outline-primary" href="#activities" data-lang="heroBtnActivities"></a>
-          </div>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="assets/Images/AAILlogo.png" class="img-fluid rounded-4 img-banner hero-img-glow" alt="AAIL banner" />
+  <section class="hero hero--split" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="hero__text span-5">
+        <p class="hero__kicker"><span data-lang="heroKicker"></span></p>
+        <h1 id="hero-h" class="mo-lt__type" data-moment="liquid-type" data-moment-opts='{"strength": 0.8}' data-lang="heroTitle"></h1>
+        <p class="hero__lead" data-lang="heroLead"></p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#research"><span data-lang="heroPrimary"></span><svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#contact" data-lang="heroSecondary"></a>
         </div>
       </div>
-
-      <!-- 介绍研究方向，包括4个卡片 -->
-      <div class="row mt-3">
-        <div class="col-12">
-          <div class="section-header mb-1">
-            <h2 class="section-title mb-3"><span class="title-bar"></span>
-              <span data-lang="investigateTitle"></span>
-            </h2>
-            <p class="section-lead mb-2" data-lang="investigateLead"></p>
-          </div>
-        </div>
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="research-card card-purple border border-1 rounded-4 p-4 h-100">
-              <div class="icon-wrap bg-purple text-purple mb-3">
-                <i class="bi bi-robot"></i>
-              </div>
-              <h5 class="fw-semibold mb-2" data-lang="card1Title"></h5>
-              <p class="text-secondary mb-0" data-lang="card1Desc"></p>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="research-card card-blue border border-1 rounded-4 p-4 h-100">
-              <div class="icon-wrap bg-blue text-blue mb-3">
-                <i class="bi bi-diagram-3"></i>
-              </div>
-              <h5 class="fw-semibold mb-2" data-lang="card2Title"></h5>
-              <p class="text-secondary mb-0" data-lang="card2Desc"></p>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="research-card card-cyan border border-1 rounded-4 p-4 h-100">
-              <div class="icon-wrap bg-cyan text-cyan mb-3">
-                <i class="bi bi-cpu"></i>
-              </div>
-              <h5 class="fw-semibold mb-2" data-lang="card3Title"></h5>
-              <p class="text-secondary mb-0" data-lang="card3Desc"></p>
-            </div>
-          </div>
-          <!-- Card 4 -->
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="research-card card-emerald border border-1 rounded-4 p-4 h-100">
-              <div class="icon-wrap bg-emerald text-emerald mb-3">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <h5 class="fw-semibold mb-2" data-lang="card4Title"></h5>
-              <p class="text-secondary mb-0" data-lang="card4Desc"></p>
-            </div>
-          </div>
+      <div class="hero__media span-6 start-7">
+        <img src="assets/img/activity/20240813.webp" data-lang-alt="heroPhotoAlt" style="--ly-pos: 50% 40%" fetchpriority="high" width="1419" height="1060" data-source="client" data-subject="lab members at ACL 2024">
+        <div class="ly-float">
+          <div class="ly-float__row"><span class="ly-live" data-lang="heroFloatWhen"></span><span data-lang="heroFloatWhere"></span></div>
+          <div class="ly-float__title" data-lang="heroFloatTitle"></div>
         </div>
       </div>
-    </section>
+    </div></div>
+  </section>

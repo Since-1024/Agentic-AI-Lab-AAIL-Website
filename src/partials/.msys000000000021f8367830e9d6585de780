@@ -1,0 +1,25 @@
+<footer class="footer closing footer--statement" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h" data-lang="closeTitle"></h2><p class="t-lead" data-lang="closeLead"></p></div>
+        <a class="btn btn--primary" href="mailto:qianc@sjtu.edu.cn"><span data-lang="closeButton"></span><svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <p class="close__word" aria-hidden="true">Agentic AI Lab</p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top">AAIL</a>
+          <p class="footer__lede" data-lang="footerLede"></p>
+        </div>
+        <div class="span-2 start-7 footer__col"><h3 data-lang="footerColLab"></h3><ul><li><a href="#directions" data-lang="navResearch"></a></li><li><a href="#people" data-lang="navPeople"></a></li><li><a href="#life" data-lang="navActivities"></a></li></ul></div>
+        <div class="span-2 footer__col"><h3 data-lang="footerColWork"></h3><ul><li><a href="#research" data-lang="resTitle"></a></li><li><a href="#systems" data-lang="navSystems"></a></li><li><a href="#news" data-lang="navNews"></a></li></ul></div>
+        <div class="span-2 footer__col"><h3 data-lang="footerColContact"></h3><ul><li><a href="mailto:qianc@sjtu.edu.cn">qianc@sjtu.edu.cn</a></li><li><a href="https://qianc62.github.io/" target="_blank" rel="noopener" data-lang="footerHomepage"></a></li><li><span class="footer__address" data-lang="footerAddress"></span></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span data-lang="footerCopy"></span>
+      </div>
+    </div>
+  </div>
+</footer>
