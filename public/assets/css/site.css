@@ -110,3 +110,16 @@
 .paper-stack__count b { font-weight: 500; color: var(--ink); }
 @media (max-width: 639px) { .paper-stack { --c-w: 80%; } .paper-card { top: 52%; } .paper-card[data-pos="1"] { --y: -18px; } .paper-card[data-pos="2"] { --y: -34px; } }
 @media (prefers-reduced-motion: reduce) { .paper-card { transition: none; } }
+
+/* the deck's controls: previous, next, pause, three discs at the bottom right */
+.paper-stack { touch-action: pan-y; }
+.paper-card { user-select: none; -webkit-user-drag: none; }
+.paper-stack__controls { position: absolute; right: 12px; bottom: 12px; z-index: 7; display: flex; gap: 8px; }
+.paper-stack__btn { position: relative; display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border-radius: 50%; cursor: pointer;
+  border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent); background: var(--bg); color: var(--ink);
+  box-shadow: 0 1px 2px rgb(0 0 0 / .10), 0 4px 12px -4px rgb(0 0 0 / .22); transition: transform 160ms ease, background 160ms ease; }
+.paper-stack__btn::before { content: ""; position: absolute; inset: -4px; border-radius: 50%; }
+.paper-stack__btn:hover { background: color-mix(in oklab, var(--accent) 8%, var(--bg)); }
+.paper-stack__btn:active { transform: scale(.94); }
+.paper-stack__btn svg { width: 16px; height: 16px; }
+.paper-stack__toggle svg { width: 13px; height: 13px; fill: currentColor; }

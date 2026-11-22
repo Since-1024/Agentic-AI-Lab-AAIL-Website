@@ -25,6 +25,8 @@
   "heroPrimary": "查看研究",
   "heroSecondary": "加入我们",
   "heroStackAria": "最新论文，自动轮换",
+  "heroPrev": "上一篇",
+  "heroNext": "下一篇",
   "dirTitle": "四个研究方向。",
   "dirTitleMuted": "从单个智能体，到成百上千个智能体的协作。",
   "dir1Title": "大模型智能体",

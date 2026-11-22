@@ -25,6 +25,8 @@
   "heroPrimary": "See the research",
   "heroSecondary": "Join the lab",
   "heroStackAria": "Recent papers, rotating",
+  "heroPrev": "Previous paper",
+  "heroNext": "Next paper",
   "dirTitle": "Four research directions.",
   "dirTitleMuted": "From one agent to thousands working together.",
   "dir1Title": "LLM agents",
