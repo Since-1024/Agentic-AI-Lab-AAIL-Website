@@ -18,7 +18,7 @@
 .sys-rows .rows__value { align-self: start; }
 
 /* research: six papers a year, two rows of three; every card one height */
-#research .paper > .panel { --p-h: 184px; flex: none; width: 100%; justify-self: stretch; height: var(--p-h); min-height: 0; margin: 0 0 var(--s-3); border-radius: var(--r-lg); }
+#research .paper > .panel { --p-h: clamp(184px, 30vh, 300px); flex: none; width: 100%; justify-self: stretch; height: var(--p-h); min-height: 0; margin: 0 0 var(--s-3); border-radius: var(--r-lg); }
 #research .section-head--row > .tabs { display: flex; flex-wrap: wrap; gap: var(--s-2); max-width: none; }
 .paper { display: grid; align-content: start; gap: var(--s-2); }
 .paper > h3 { font-size: var(--t-card); }
@@ -123,3 +123,62 @@
 .paper-stack__btn:active { transform: scale(.94); }
 .paper-stack__btn svg { width: 16px; height: 16px; }
 .paper-stack__toggle svg { width: 13px; height: 13px; fill: currentColor; }
+
+/* ---------------------------------------------------------------- colour
+   The page alternates its grounds so no two plain white screens follow each other:
+   white hero · pale blue directions · navy systems · white research · pale blue news ·
+   brand-blue statement · white people · navy life · footer. Pictures sit on pastel blocks
+   (blue, sky, mint, sand) that turn card by card, and every section heading starts with a short bar. */
+.ground-tint {
+  --bg: #edf2fc; --surface: #ffffff; --card: #ffffff; --ink: var(--p-ink); --muted: #56627a;
+  --accent: var(--p-accent); --accent-ink: #fff; --action: var(--p-action); --action-ink: #fff;
+  --line: color-mix(in oklab, var(--ink) 11%, transparent); --line-strong: color-mix(in oklab, var(--ink) 20%, transparent);
+  background: var(--bg); color: var(--ink);
+}
+.ground-accent {
+  --bg: #1d4ed8; --surface: #2a5be3; --card: #2a5be3; --ink: #ffffff; --muted: #c9d7fb;
+  --accent: #ffd166; --accent-ink: #0f1b33; --action: #ffffff; --action-ink: #1d4ed8;
+  --line: rgb(255 255 255 / .18); --line-strong: rgb(255 255 255 / .32);
+  background: var(--bg); color: var(--ink);
+}
+/* the statement band: two soft rings in the corner */
+#belief { position: relative; overflow: hidden; isolation: isolate; }
+#belief::before, #belief::after { content: ""; position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; }
+#belief::before { width: 56vw; aspect-ratio: 1; right: -18vw; top: -22vw; background: radial-gradient(circle, rgb(255 255 255 / .12) 0 58%, transparent 58.5%); }
+#belief::after { width: 30vw; aspect-ratio: 1; right: 8vw; bottom: -14vw; border: 2px solid rgb(255 255 255 / .16); }
+#belief .t-label { color: var(--muted); }
+
+/* the bar before every section heading */
+.section-head h2::before, #belief .t-label::before, .closing__cta h2::before {
+  content: ""; display: block; width: 40px; height: 6px; border-radius: 3px; margin-bottom: var(--s-4);
+  background: var(--accent);
+}
+.ground-inverse .section-head h2::before { background: #ffd166; }
+
+/* the hero deck: a brand-blue block with two rings and a dotted corner */
+:root .paper-stack {
+  background:
+    radial-gradient(circle at 88% 12%, rgb(255 255 255 / .16) 0 18%, transparent 18.3%),
+    radial-gradient(circle at 6% 96%, rgb(15 27 51 / .22) 0 26%, transparent 26.3%),
+    radial-gradient(rgb(255 255 255 / .22) 1.2px, transparent 1.6px) 0 0 / 18px 18px,
+    linear-gradient(150deg, #2f6af0 0%, #1d4ed8 55%, #1a3fb0 100%);
+}
+.paper-stack::after { content: ""; position: absolute; z-index: 0; left: 8%; top: 9%; width: 64px; height: 64px; border-radius: 16px;
+  background: #ffd166; transform: rotate(12deg); opacity: .95; }
+.paper-stack__deck { z-index: 1; }
+.paper-stack__count { color: rgb(255 255 255 / .72); }
+.paper-stack__count b { color: #fff; }
+.paper-card { box-shadow: 0 2px 4px rgb(10 20 60 / .18), 0 24px 48px -20px rgb(10 20 60 / .55); }
+
+/* pastel blocks under the pictures, turning card by card */
+#directions .card:nth-child(4n+1) > .panel, #research .paper:nth-child(4n+1) > .panel { --ground-bg: #dfe9ff; }
+#directions .card:nth-child(4n+2) > .panel, #research .paper:nth-child(4n+2) > .panel { --ground-bg: #d9f0f7; }
+#directions .card:nth-child(4n+3) > .panel, #research .paper:nth-child(4n+3) > .panel { --ground-bg: #dcf2e6; }
+#directions .card:nth-child(4n+4) > .panel, #research .paper:nth-child(4n+4) > .panel { --ground-bg: #fbeed5; }
+:root #directions .panel.panel--fig, :root #research .panel.panel--fig { background: var(--ground-bg); }
+
+/* news: the dates in the accent */
+#news .news__date { color: var(--accent); font-weight: 500; }
+
+/* people: the lead on a blue block */
+.lead-tile { background: #edf2fc; border-radius: var(--r-lg); padding: var(--s-4); }

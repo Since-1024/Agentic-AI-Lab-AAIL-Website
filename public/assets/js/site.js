@@ -34,7 +34,7 @@
 })();
 
 // The hero's paper deck: every 2 s the front card slides off to the left and goes to the back.
-// The arrows, a sideways swipe on a trackpad (or shift + wheel) over the deck, a mouse drag or a
+// The arrows, the mouse wheel or a trackpad swipe over the deck, a mouse drag or a
 // finger swipe, and the arrow keys move it by hand. The timer stops while the pointer is over the
 // deck or a control has focus, off screen, in a background tab, after the pause button, and never
 // runs under reduced motion.
@@ -130,18 +130,18 @@
   });
 
   // a sideways swipe over the deck moves one card per gesture (a gesture ends after 220 ms of quiet);
-  // an up-and-down wheel still scrolls the page
-  var acc = 0, fired = false, quiet = null;
+  // the wheel over the deck turns it too: down or right is the next paper, up or left the one before.
+  // A long scroll keeps turning, one card per 900 ms, so a trackpad's glide never skips several.
+  var acc = 0, lastStep = 0, quiet = null;
   stack.addEventListener('wheel', function (e) {
-    var dx = e.deltaX, dy = e.deltaY;
-    if (e.shiftKey && !dx) { dx = dy; dy = 0; }
-    if (Math.abs(dx) <= Math.abs(dy)) return;
+    var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+    if (!d) return;
     e.preventDefault();
     clearTimeout(quiet);
-    quiet = setTimeout(function () { acc = 0; fired = false; }, 220);
-    if (fired) return;
-    acc += dx;
-    if (Math.abs(acc) > 40) { fired = true; step(acc > 0 ? 1 : -1); }
+    quiet = setTimeout(function () { acc = 0; lastStep = 0; }, 220);
+    acc += d;
+    var now = Date.now();
+    if (Math.abs(acc) > 40 && now - lastStep > 900) { lastStep = now; step(acc > 0 ? 1 : -1); acc = 0; }
   }, { passive: false });
 
   // drag with the mouse, or swipe with a finger: left is the next paper, right the one before

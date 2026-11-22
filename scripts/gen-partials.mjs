@@ -86,7 +86,7 @@ const news = [
 ];
 const newsRow = ([date, k, links]) => `
             <li><span class="rows__name news__date">${date}</span><p data-lang="${k}"></p><span class="rows__value news__links">${links.map(([l, h]) => `<a class="link" href="${h}" target="_blank" rel="noopener" data-lang="${l}"></a>`).join('')}</span></li>`;
-out('5-news.html', `  <section class="section" id="news" aria-labelledby="news-h">
+out('5-news.html', `  <section class="section ground-tint" id="news" aria-labelledby="news-h">
     <div class="wrap">
       <div class="section-head">
         <h2 id="news-h"><span data-lang="newsTitle"></span> <span class="muted" data-lang="newsTitleMuted"></span></h2>
@@ -164,7 +164,7 @@ const shots = ['20260913', '20260911', '20260718', '20260418', '20260418-2', '20
   '20260315-2', '20260312', '20251223', '20250927', '20250914', '20250728', '20250725', '20250620'];
 const shot = s => `
           <figure class="wall__cell"><img src="assets/img/activity/${s}.webp" data-lang-alt="a${s}" data-lang-title="a${s}" loading="lazy"></figure>`;
-out('8-activities.html', `  <section class="section g2" id="life" aria-labelledby="life-h">
+out('8-activities.html', `  <section class="section g2 ground-inverse" id="life" aria-labelledby="life-h">
     <div class="wrap">
       <div class="group">
         <div class="section-head">
