@@ -6,7 +6,6 @@
   "langSwitchAria": "切换到中文",
   "menuAria": "Menu",
   "navMainAria": "Main",
-
   "navResearch": "Research",
   "navSystems": "Systems",
   "navNews": "News",
@@ -20,17 +19,12 @@
   "menuCardChatDevDesc": "Build multi-agent systems without code",
   "menuCardPeople": "Meet the team",
   "menuCardPeopleDesc": "17 faculty and students",
-
   "heroKicker": "School of Artificial Intelligence, Shanghai Jiao Tong University",
   "heroTitle": "A research lab for LLM agents that work together",
   "heroLead": "AAIL studies LLM-based agents, multi-agent collaboration and collective emergence, and turns the results into systems people use. ChatDev, MacNet and Puppeteer appeared at ACL, ICLR and NeurIPS.",
   "heroPrimary": "See the research",
   "heroSecondary": "Join the lab",
-  "heroPhotoAlt": "Lab members in front of the ChatDev poster at ACL 2024",
-  "heroFloatWhen": "ACL 2024",
-  "heroFloatWhere": "Bangkok",
-  "heroFloatTitle": "ChatDev poster session",
-
+  "heroStackAria": "Recent papers, rotating",
   "dirTitle": "Four research directions.",
   "dirTitleMuted": "From one agent to thousands working together.",
   "dir1Title": "LLM agents",
@@ -43,7 +37,6 @@
   "dir4Desc": "Research turned into systems: ChatDev for software, TeachMaster for teaching videos.",
   "dir3Alt": "Diagram of agents collaborating and emergent behaviour in AgentVerse",
   "dir4Alt": "The course editor of TeachMaster 2.0",
-
   "sysTitle": "Systems we built.",
   "sysTitleMuted": "Open source, or live online.",
   "sysVideoAria": "ChatDev 2.0 demo: building a multi-agent workflow by drag and drop",
@@ -59,7 +52,6 @@
   "sys4Name": "ChatDev 1.0",
   "sys4Desc": "A multi-agent framework for software development. ACL 2024.",
   "sys4Link": "GitHub",
-
   "resTitle": "Selected papers.",
   "resTitleMuted": "Browse by year.",
   "resTabAria": "Choose papers by year",
@@ -70,7 +62,6 @@
   "code": "Code",
   "website": "Website",
   "venuePreprint": "Preprint",
-
   "p18Title": "Agentic University",
   "p18Desc": "Learners and specialised agents plan and keep refining a personal learning path together.",
   "p14Title": "DevicesWorld",
@@ -107,7 +98,6 @@
   "p10Desc": "LLMs reason and communicate better in formats other than natural language.",
   "p11Title": "Multi-agent research eBook",
   "p11Desc": "A structured overview of LLM-based multi-agent research.",
-
   "newsTitle": "Recent news.",
   "newsTitleMuted": "Papers, launches and results.",
   "n14": "New paper: Agentic University, personalised learning with agents",
@@ -126,10 +116,8 @@
   "n12": "TeachMaster released: generative teaching via code",
   "n13": "ChatDev 2.0 released: build multi-agent systems by drag and drop",
   "newsMediaAria": "Agentic University demo",
-
   "stmtLabel": "What we believe",
   "stmt": "One agent can only do so much. We study how agents divide work, talk and learn from each other, so they work as a team and finish tasks no single model can.",
-
   "peopleTitle": "The team.",
   "peopleTitleMuted": "17 faculty and students from AI, software and communications.",
   "rolePI": "Associate Professor, PhD advisor, lab lead",
@@ -165,7 +153,6 @@
   "Desczhangqiran": "Research intern · Shanghai Jiao Tong University",
   "Descwukezhao": "Research intern · University of Sydney",
   "Desczhouyunjie": "Research intern · Xidian University",
-
   "actTitle": "Life in the lab.",
   "actTitleMuted": "Meetings and deadlines, and dinners and volleyball too.",
   "a20260913": "Jingru Fan speaks for returning students at the school's opening ceremony",
@@ -188,7 +175,6 @@
   "a20250620": "Jingru Fan and Yufan Dang graduate",
   "a20250620-2": "Graduation photo",
   "a20240813": "At ACL 2024 in Bangkok",
-
   "closeTitle": "Join us",
   "closeLead": "Undergraduates, master's and PhD students, postdocs, research assistants and engineers are welcome. Write to Chen Qian with your CV and what you want to work on.",
   "closeButton": "Write to Chen Qian",

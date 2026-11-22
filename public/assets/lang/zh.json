@@ -6,7 +6,6 @@
   "langSwitchAria": "Switch to English",
   "menuAria": "菜单",
   "navMainAria": "主导航",
-
   "navResearch": "研究",
   "navSystems": "系统",
   "navNews": "动态",
@@ -20,17 +19,12 @@
   "menuCardChatDevDesc": "零代码搭建多智能体系统",
   "menuCardPeople": "认识团队",
   "menuCardPeopleDesc": "17 位老师与同学",
-
   "heroKicker": "上海交通大学人工智能学院",
   "heroTitle": "研究会协作的大模型智能体",
   "heroLead": "AAIL 研究大模型智能体、多智能体协作与群体涌现，并把成果做成可用的系统。ChatDev、MacNet、Puppeteer 等工作发表于 ACL、ICLR 与 NeurIPS。",
   "heroPrimary": "查看研究",
   "heroSecondary": "加入我们",
-  "heroPhotoAlt": "实验室成员在 ACL 2024 会场的 ChatDev 海报前合影",
-  "heroFloatWhen": "ACL 2024",
-  "heroFloatWhere": "曼谷",
-  "heroFloatTitle": "ChatDev 海报展示",
-
+  "heroStackAria": "最新论文，自动轮换",
   "dirTitle": "四个研究方向。",
   "dirTitleMuted": "从单个智能体，到成百上千个智能体的协作。",
   "dir1Title": "大模型智能体",
@@ -43,7 +37,6 @@
   "dir4Desc": "把研究落地为系统：软件开发的 ChatDev，教学视频生成的 TeachMaster。",
   "dir3Alt": "AgentVerse 中多个智能体协作与涌现行为的示意图",
   "dir4Alt": "TeachMaster 2.0 的课程制作界面",
-
   "sysTitle": "我们做出的系统。",
   "sysTitleMuted": "开源，或者已经在线上可用。",
   "sysVideoAria": "ChatDev 2.0 拖拽搭建多智能体工作流的演示",
@@ -59,7 +52,6 @@
   "sys4Name": "ChatDev 1.0",
   "sys4Desc": "用于软件开发的多智能体协作框架，ACL 2024。",
   "sys4Link": "GitHub",
-
   "resTitle": "代表性论文。",
   "resTitleMuted": "按年份浏览。",
   "resTabAria": "按年份选择论文",
@@ -70,7 +62,6 @@
   "code": "代码",
   "website": "网站",
   "venuePreprint": "预印本",
-
   "p18Title": "Agentic University",
   "p18Desc": "学习者与专业智能体一起规划并持续调整个性化学习路径。",
   "p14Title": "DevicesWorld",
@@ -107,7 +98,6 @@
   "p10Desc": "大模型改用非自然语言的格式推理与交流，效果更好。",
   "p11Title": "多智能体研究电子书",
   "p11Desc": "系统梳理基于大模型的多智能体研究。",
-
   "newsTitle": "最近的动态。",
   "newsTitleMuted": "论文发表、系统上线与新成果。",
   "n14": "新论文：Agentic University，与智能体协作的个性化学习",
@@ -126,10 +116,8 @@
   "n12": "TeachMaster 发布：以代码为中心的生成式教学",
   "n13": "ChatDev 2.0 发布：拖拽搭建多智能体系统",
   "newsMediaAria": "Agentic University 的演示",
-
   "stmtLabel": "我们相信",
   "stmt": "一个智能体能做的事有限。我们研究智能体如何分工、交流和互相学习，让它们像一个团队那样协作，去完成单个模型做不到的任务。",
-
   "peopleTitle": "团队成员。",
   "peopleTitleMuted": "17 位老师与同学，来自人工智能、软件与通信等方向。",
   "rolePI": "副教授、博士生导师，团队负责人",
@@ -165,7 +153,6 @@
   "Desczhangqiran": "研究实习生 · 上海交通大学本科生",
   "Descwukezhao": "研究实习生 · 悉尼大学硕士生",
   "Desczhouyunjie": "研究实习生 · 西安电子科技大学硕士生",
-
   "actTitle": "实验室生活。",
   "actTitleMuted": "开会、写论文，也一起吃饭、打球。",
   "a20260913": "范静如在学院开学典礼上作为老生代表发言",
@@ -188,7 +175,6 @@
   "a20250620": "范静如、党余凡毕业",
   "a20250620-2": "毕业合影",
   "a20240813": "在曼谷参加 ACL 2024",
-
   "closeTitle": "加入我们",
   "closeLead": "欢迎本科生、硕士生、博士生、博士后、研究助理与工程师。写信给钱忱老师，附上简历和你想做的方向。",
   "closeButton": "写信给钱忱老师",
