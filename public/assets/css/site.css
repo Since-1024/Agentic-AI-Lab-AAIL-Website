@@ -182,3 +182,56 @@
 
 /* people: the lead on a blue block */
 .lead-tile { background: #edf2fc; border-radius: var(--r-lg); padding: var(--s-4); }
+
+/* ---------------------------------------------------------------- motion
+   Serious, with a light step: one easing for everything that arrives (fast out, long settle), a short
+   overshoot only for the heading bars and the portraits, stagger in waves of a row at most.
+   site.js adds html.rv-on, so without the script, or under reduced motion, everything just shows. */
+:root { --rv-ease: cubic-bezier(.22, .8, .24, 1); --rv-pop: cubic-bezier(.34, 1.56, .64, 1); }
+
+/* things rise into place as they reach the screen */
+html.rv-on .rv {
+  transition: opacity 650ms var(--rv-ease), translate 800ms var(--rv-ease), scale 800ms var(--rv-ease), clip-path 900ms var(--rv-ease);
+  transition-delay: calc(var(--rv-i, 0) * 80ms);
+}
+html.rv-on .rv:not(.is-in) { opacity: 0; translate: 0 26px; }
+html.rv-on .rv-side:not(.is-in) { translate: -22px 0; }
+html.rv-on .rv-zoom:not(.is-in) { translate: 0 18px; scale: .96; }
+/* the photo wall unrolls cell by cell, top to bottom */
+html.rv-on .rv-wipe:not(.is-in) { opacity: 1; translate: none; }
+html.rv-on .rv-wipe > img { clip-path: inset(0 0 0 0); transition: clip-path 900ms var(--rv-ease), scale 1100ms var(--rv-ease); transition-delay: calc(var(--rv-i, 0) * 80ms); }
+html.rv-on .rv-wipe:not(.is-in) > img { clip-path: inset(0 0 100% 0); scale: 1.12; }
+
+/* the bar before a heading draws itself after the words arrive */
+.rv-h::before { transform-origin: left center; transition: scale 700ms var(--rv-pop) 260ms; }
+html.rv-on .rv-h:not(.is-in)::before { scale: 0 1; }
+
+/* the reading bar along the top */
+.read-bar { position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 3px; pointer-events: none;
+  transform: scaleX(0); transform-origin: left center; background: linear-gradient(90deg, #1d4ed8, #2f6af0 70%, #ffd166); }
+
+/* the hero: the deck leans toward the pointer, the yellow tile and the rings drift */
+.paper-stack__deck { transform: perspective(1400px) rotateY(var(--lean-x, 0deg)) rotateX(var(--lean-y, 0deg));
+  transition: transform 500ms var(--rv-ease); }
+@keyframes tile-drift { 0%, 100% { translate: 0 0; rotate: 0deg; } 50% { translate: 6px -12px; rotate: 14deg; } }
+@keyframes ring-breathe { 0%, 100% { scale: 1; } 50% { scale: 1.07; } }
+@keyframes ring-wander { 0%, 100% { translate: 0 0; } 50% { translate: -2vw 1.5vw; } }
+@media (prefers-reduced-motion: no-preference) {
+  html:not([data-motion="off"]) .paper-stack::after { animation: tile-drift 7s ease-in-out infinite; }
+  html:not([data-motion="off"]) #belief::before { animation: ring-wander 14s ease-in-out infinite; }
+  html:not([data-motion="off"]) #belief::after { animation: ring-breathe 9s ease-in-out infinite; }
+}
+
+/* small answers to the pointer: a news row steps aside behind a bar, a portrait tilts */
+#news .rows > li { position: relative; }
+#news .rows > li:not(.rv) { transition: translate 260ms var(--rv-ease); }
+#news .rows > li::before { content: ""; position: absolute; left: -14px; top: 22%; bottom: 22%; width: 3px; border-radius: 2px;
+  background: var(--accent); scale: 1 0; transition: scale 260ms var(--rv-ease); }
+.person-tile .tile__media { transition: translate 320ms var(--rv-pop), rotate 320ms var(--rv-pop), box-shadow 320ms ease; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  #news .rows > li:hover { translate: 6px 0; }
+  #news .rows > li:hover::before { scale: 1 1; }
+  .person-tile:hover .tile__media { translate: 0 -4px; rotate: -1.5deg; box-shadow: 0 14px 28px -14px rgb(10 20 60 / .45); }
+  .person-tile:nth-child(even):hover .tile__media { rotate: 1.5deg; }
+}
+@media (prefers-reduced-motion: reduce) { .paper-stack__deck { transform: none; } .read-bar { display: none; } }

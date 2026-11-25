@@ -176,3 +176,86 @@
   }
   sync();
 })();
+
+// Motion that keeps a straight face: things rise into place as they reach the screen, a few at a time,
+// the heading bars draw themselves, the photo wall unrolls, a thin bar at the top tracks the page,
+// and the hero deck leans a little toward the pointer. Nothing moves under reduced motion.
+(function () {
+  var root = document.documentElement;
+  if (root.getAttribute('data-motion') === 'off') return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // the reading bar
+  var bar = document.createElement('div');
+  bar.className = 'read-bar';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  var ticking = false;
+  function paint() {
+    ticking = false;
+    var max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, scrollY / max) : 0) + ')';
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+  addEventListener('resize', paint);
+  paint();
+
+  // the hero deck leans toward the pointer
+  var stack = document.querySelector('.paper-stack');
+  if (stack && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    stack.addEventListener('pointermove', function (e) {
+      var r = stack.getBoundingClientRect();
+      stack.style.setProperty('--lean-x', (((e.clientX - r.left) / r.width - 0.5) * 6).toFixed(2) + 'deg');
+      stack.style.setProperty('--lean-y', (((e.clientY - r.top) / r.height - 0.5) * -5).toFixed(2) + 'deg');
+    });
+    stack.addEventListener('pointerleave', function () {
+      stack.style.setProperty('--lean-x', '0deg');
+      stack.style.setProperty('--lean-y', '0deg');
+    });
+  }
+
+  if (!('IntersectionObserver' in window)) return;
+  // [what, how it enters, how many share one wave]
+  var groups = [
+    ['.section-head h2, #belief .t-label', 'rv rv-h', 1],
+    ['#directions .card', 'rv', 4],
+    ['#systems .sys-rows > li', 'rv rv-side', 4],
+    ['#systems .frame--video', 'rv rv-zoom', 1],
+    ['#research .paper', 'rv', 3],
+    ['#news .rows > li', 'rv rv-side', 6],
+    ['#people .lead-tile', 'rv', 1],
+    ['#people .person-tile', 'rv', 6],
+    ['#life .wall__cell', 'rv rv-wipe', 8],
+    ['.footer__col, .footer__lede', 'rv', 4]
+  ];
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('is-in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+  groups.forEach(function (g) {
+    var seen = new Map();
+    document.querySelectorAll(g[0]).forEach(function (el) {
+      var n = seen.get(el.parentNode) || 0;
+      seen.set(el.parentNode, n + 1);
+      el.style.setProperty('--rv-i', n % g[2]);
+      g[1].split(' ').forEach(function (c) { el.classList.add(c); });
+      // once in place, hand the element back to its own hover motion
+      el.addEventListener('transitionend', function done(ev) {
+        if (ev.pseudoElement || !el.classList.contains('is-in')) return;
+        if (ev.target !== el && !(ev.target.parentNode === el && ev.propertyName === 'clip-path')) return;
+        if (ev.propertyName !== 'opacity' && ev.propertyName !== 'clip-path') return;
+        el.classList.remove('rv', 'rv-side', 'rv-zoom', 'rv-wipe');
+        el.style.removeProperty('--rv-i');
+        el.removeEventListener('transitionend', done);
+      });
+      // already scrolled past (a link to #people, a reload half-way down): no entrance
+      if (el.getBoundingClientRect().bottom < 0) el.classList.add('is-in');
+      else io.observe(el);
+    });
+  });
+  root.classList.add('rv-on');
+})();
